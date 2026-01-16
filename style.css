@@ -1,11 +1,22 @@
+/* ===== Theme variables ===== */
+:root {
+--bg-color: #ffffff;
+--text-color: #1a1a1a;
+--muted-text: #555;
+--border-color: #eee;
+--link-color: #0366d6;
+}
+
+/* ===== Base layout ===== */
 body {
 font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-background-color: #ffffff;
-color: #1a1a1a;
+background-color: var(--bg-color);
+color: var(--text-color);
 max-width: 900px;
 margin: 40px auto;
 padding: 0 20px;
 line-height: 1.65;
+transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 header {
@@ -18,26 +29,28 @@ margin-bottom: 6px;
 }
 
 .subtitle {
-color: #555;
+color: var(--muted-text);
 margin-bottom: 12px;
 }
 
 .links a {
-color: #0366d6;
+color: var(--link-color);
 text-decoration: none;
 margin: 0 6px;
 }
 
+/* ===== Sections ===== */
 section {
 margin-bottom: 50px;
 }
 
 h2 {
-border-bottom: 2px solid #eee;
+border-bottom: 2px solid var(--border-color);
 padding-bottom: 6px;
 margin-bottom: 24px;
 }
 
+/* ===== Projects (homepage cards) ===== */
 .projects {
 display: grid;
 grid-template-columns: 1fr;
@@ -46,7 +59,7 @@ gap: 22px;
 
 .project {
 padding: 20px 22px;
-border: 1px solid #eee;
+border: 1px solid var(--border-color);
 border-radius: 6px;
 }
 
@@ -56,76 +69,71 @@ margin-bottom: 6px;
 
 .meta {
 font-size: 0.9rem;
-color: #666;
+color: var(--muted-text);
 margin-bottom: 10px;
 }
 
 .project-links a {
 font-size: 0.9rem;
-color: #0366d6;
+color: var(--link-color);
 text-decoration: none;
 }
 
+/* ===== Lists ===== */
 ul {
 margin-top: 10px;
 padding-left: 20px;
 }
 
-footer {
-text-align: center;
-color: #777;
-font-size: 0.85rem;
-margin-top: 70px;
+ul li {
+margin-bottom: 6px;
 }
 
-
-/* ===== Academic page refinements ===== */
-
-body {
-font-size: 16px;
-}
-
+/* ===== Academic page container ===== */
 main {
 max-width: 780px;
 margin: 0 auto;
 }
 
-section p,
-section ul {
-max-width: 720px;
-}
-
-section ul {
-margin-top: 12px;
-}
-
-section ul li {
-margin-bottom: 6px;
-}
-
-/* Make academic sections feel more document-like */
-section {
-padding-top: 10px;
-}
-
-/* Subtle emphasis for key academic facts */
-section strong {
-color: #000;
-}
-
-/* Back link styling */
-header .links a {
-font-size: 0.95rem;
-color: #444;
-}
-
-header .links a:hover {
-text-decoration: underline;
-}
-
-/* Academic page container */
 .academic-card {
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 30px 32px;
+border: 1px solid var(--border-color);
+border-radius: 6px;
+padding: 30px 32px;
+}
+
+/* ===== Dark mode ===== */
+body.dark {
+--bg-color: #0f1115;
+--text-color: #e6e6e6;
+--muted-text: #a0a0a0;
+--border-color: #2a2d33;
+--link-color: #6ca6ff;
+}
+
+/* ===== Theme toggle button ===== */
+#theme-toggle {
+margin-top: 15px;
+background: none;
+border: 1px solid var(--border-color);
+border-radius: 6px;
+padding: 6px 10px;
+cursor: pointer;
+font-size: 1rem;
+color: var(--text-color);
+}
+
+#theme-toggle:hover {
+background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark #theme-toggle:hover {
+background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Footer ===== */
+footer {
+text-align: center;
+color: var(--muted-text);
+font-size: 0.85rem;
+margin-top: 70px;
 }
