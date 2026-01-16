@@ -77,3 +77,55 @@ color: #777;
 font-size: 0.85rem;
 margin-top: 70px;
 }
+
+
+/* ===== Academic page refinements ===== */
+
+body {
+font-size: 16px;
+}
+
+main {
+max-width: 780px;
+margin: 0 auto;
+}
+
+section p,
+section ul {
+max-width: 720px;
+}
+
+section ul {
+margin-top: 12px;
+}
+
+section ul li {
+margin-bottom: 6px;
+}
+
+/* Make academic sections feel more document-like */
+section {
+padding-top: 10px;
+}
+
+/* Subtle emphasis for key academic facts */
+section strong {
+color: #000;
+}
+
+/* Back link styling */
+header .links a {
+font-size: 0.95rem;
+color: #444;
+}
+
+header .links a:hover {
+text-decoration: underline;
+}
+
+/* Academic page container */
+.academic-card {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 30px 32px;
+}
