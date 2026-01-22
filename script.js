@@ -18,3 +18,17 @@ toggle.addEventListener("click", () => {
     toggle.textContent = "🌙";
   }
 });
+
+// Card hover effect
+const cards = document.querySelectorAll(".project");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "translateY(-2px)";
+    card.style.transition = "transform 0.15s ease";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "translateY(0)";
+  });
+});

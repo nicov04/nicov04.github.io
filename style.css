@@ -137,3 +137,8 @@ color: var(--muted-text);
 font-size: 0.85rem;
 margin-top: 70px;
 }
+
+.project p {
+  margin-bottom: 12px;
+  color: var(--muted-text);
+}
